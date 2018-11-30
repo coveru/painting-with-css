@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>pikachu</title>
+  <style>
+    *{ margin:0;padding:0;
+       box-sizing:border-box;
+    }
+    *::after,*::befor{
+      box-sizing:border-box;
+    }
+    body{
+      height:100vh;
+      border: 1px solid green;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#ffdc2b;
+    }
+    .wrapper{
+      width:100%;
+      height:165px;
+      
+      position:relative;
+      
+    }
+    .nose{
+      height:0px;
+      width:0px;
+      border-style: solid;
+      border-width:12px;
+      border-color: black transparent transparent;
+      
+      position:absolute;
+      left:50%;
+      top:28px;
+      margin-left:-12px;
+      border-radius:11px;
+    }
+    .eye{
+      width:49px;
+      height:49px;
+      background:#2e2e2e;
+      border-radius:50%;
+      position: absolute;
+      
+    }
+   .eye::before{
+     content:'';
+     display:block;
+     width:24px;
+     height:24px;
+     background:white;
+     border-radius:50%;
+     position:absolute;
+     left:5px;
+     border:2px solid black;
+     top:-1px;
+   }
+   
+    .eye.right{
+      left:50%;
+      margin-left:90px;
+       border:2px solid black;
+    }
+    .eye.left{
+      right:50%;
+      margin-right:90px;
+      border:2px solid black;
+    }
+    .face{
+      width:68px;
+      height:68px;
+      background:#ff251a;
+      border:2px solid black;
+      border-radius:50%;
+      position:absolute;
+      top:85px;
+    }
+    .face.left{
+      right:50%;
+      margin-right:116px;
+    }
+    .face.right{
+      left:50%;
+      margin-left:116px;  
+    }
+    .upperLip{
+       height:25px;
+       width:80px;
+       border:3px solid black;
+       border-top:none;
+       transform:rotate(-20deg);
+       position:absolute;
+       top:52px;
+      background:#ffdc2b;
+    }
+    .upperLip.left{
+       right: 50%;
+       border-bottom-left-radius:40px 25px;
+       border-right:none;
+    }
+    .upperLip.right{
+      left:50%;
+      border-left:none;
+      border-bottom-right-radius:40px 25px;
+      transform:rotate(20deg);
+    }
+    .lowerLip-wrapper{
+      bottom:0;
+      position:absolute; 
+      left:50%;
+      margin-left:-100px;
+      z-index:-1;
+      
+      transform:translateY(40px);
+      height:144px;
+      width:200px;
+      overflow:hidden;
+       
+    }
+    .lowerLip{
+      height:2000px;
+      width:200px;
+      background:#a41614;
+      border-radius:100px/600px;
+      border:3px solid black;
+      bottom:0;
+      position:absolute;
+      overflow:hidden;
+    }
+    .lowerLip::after{
+      content:'';
+      position:absolute;
+      bottom:0;
+      width:100px;
+      height:1000px;
+      background:#ff5d62;
+      border-radius:600px/400px;
+      left:25%;
+      transform:translateY(885PX);
+    }
+    .shock-left{
+      position:absolute;
+      top:104px;
+      right:50%;
+      margin-right:157px;
+      transform:rotate(135deg)  
+    }
+   .shock-right{
+     position:absolute;
+      top:116px;
+     left:50%;
+     margin-left:150px
+   }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="nose"></div>
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="face left"></div>
+    <div class="face right"></div>
+    <div class="upperLip left"></div>
+    <div class="upperLip right"></div>
+    <div class="lowerLip-wrapper">
+      <div class="lowerLip"></div>
+    </div>
+    <img class="shock-left" src="http://www.megghy.com/gif_animate/natura/tuoni/3.gif">
+    <img class="shock-right" src="http://www.megghy.com/gif_animate/natura/tuoni/3.gif">
+  </div>
+</body>
+
+</html>
